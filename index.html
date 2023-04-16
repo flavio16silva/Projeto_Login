@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="estilo/style.css">
 <link rel="stylesheet" href="estilo/media.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
   <main>
@@ -17,9 +18,22 @@
       </article>
       <article id="formulario">
             <h1>Login</h1>
-            <p>Seja bem-vindo(a) novamente. Faça seu login e tenha acesso a sua conta com configurações personalizadas. </p>
-            <form action="login.php" method="post">
-
+            <p>Seja bem-vindo(a). Faça seu login e tenha acesso a suas configurações da conta personalizadas. </p>
+            <form action="login.php" method="post" autocomplete="on">
+                <section class="campo">
+                  <span class="material-icons">login</span>
+                    <input type="email" name="login" id="ilogin" placeholder="seu email aqui" autocomplete="email" required maxlength="20">
+                    <label for="ilogin">Login</label>
+                </section>
+                <section class="campo">
+                  <span class="material-icons">key</span>
+                  <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="10" max="20">
+                  <label for="isenha">Senha</label>
+                </section>
+                <input type="submit" value="Entrar">
+                <a href="esqueci.html">
+                  Esqueci a senha <span class="material-icons">email</span>
+                </a>
             </form>
       </article>
     </section>
