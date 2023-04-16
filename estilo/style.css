@@ -46,7 +46,7 @@ section#login{
 
 /*Configurando foto*/
 section#login > article#imagem{
-  background: #f88981 url(../imagens/tags.jpg) no-repeat;
+  background: #f88981 url(../imagens/codigo.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   height: 200px;
