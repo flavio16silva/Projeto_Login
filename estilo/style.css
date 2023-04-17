@@ -33,54 +33,86 @@ section#login{
   position: absolute;
   top:50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #fcf8f8;
   width: 250px;
   height: 515px;
   border-radius: 20px;
   overflow: hidden; /*Tudo que estiver fora da borda fique escondido*/
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.47);
+  transform: translate(-50%, -50%);
   transition: width 0.3s, height 0.3s;
   transition-timing-function: ease;
 }
 
 /*Configurando foto*/
 section#login > article#imagem{
-  background: #f88981 url(../imagens/codigo.jpg) no-repeat;
+  background: url(../imagens/cafe.jpg);
   background-size: cover;
-  background-position: center center;
-  height: 200px;
+  background-position: right bottom;
+  height: 200px;  
   
 }
 
+/*Configurando formulario*/
 section#login > article#formulario{
   display: block;
   padding: 10px;
 }
 
+/*Configurando formulario - texto*/
 article#formulario {
   text-align: center;
   margin-bottom: 10px;
 }
 
+/*Configurando formulario - paragrafo*/
 article#formulario > p{
   font-size:0.8em;
 }
 
+/*label - email e login*/
 form > section.campo {
-  background-color: #995082;
+  background-color: #be4397;
+  border: 2px solid #be4397;
   display: block;
   width: 100%;
   height: 40px;
-  border-radius:5px;
+  border-radius:8px;
   margin:5px 0px;
 }
 
+/*label - email e login - retirar os nomes das labels*/
 section.campo > label {
   display:none;
-
 }
 
+/*Icone dentro da label*/
+section.campo > span{
+  color:white;
+  /*background-color: black;*/
+  font-size:2em;
+  width: 40px;
+  padding: 5px;
+}
+
+/*Label - email e senha*/
+section.campo > input{
+  background-color: #f2b6df;
+  width: calc(100% - 45px);
+  height: 100%;
+  border-radius:8px;
+  padding: 4px;
+  transform: translateY(-12px);
+  outline: none; /*sem bordar dentro da label*/
+} 
+
+/*Dar foco a label ao digitar*/
+section.campo > input:focus-within{
+  background-color: white;
+}
+
+
+/*Botão Entrar*/
 form >input[type=submit]{
   display: block;
   font-size: 1em;
@@ -94,10 +126,12 @@ form >input[type=submit]{
   cursor: pointer;
 }
 
+/*Botão Entrar - passar do mouse*/
 form >input[type=submit]:hover{
-  background-color: #995082;
+  background-color: #bf0685;
 }
 
+/*Esqueci a senha*/
 form >a.botao {
   display: block;
   text-align: center;
@@ -113,13 +147,77 @@ form >a.botao {
 
 }
 
+/*Esqueci a senha - passar do mouse*/
 form > a.botao:hover{
-  background-color: #995082;
+  background-color: #be4397;
 }
 
-
+/*Esqueci a senha - Tamanho da fonte*/
 form > a.botao > span{
-  font-size:1em;
- 
+  font-size:1em; 
 }
 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon{
+  position: relative;
+  border-radius: 50%;
+  /*Contorno do icone*/
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom:5px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size:12px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+  
+}
+
+.wrapper a {
+  text-decoration: none;
+  /*visibility: collapse;*/
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  
+}
+
+.wrapper .icon:hover .tooltip{
+  top:-45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before{
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #55acee;
+  color: #ffffff;
+}
