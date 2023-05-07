@@ -166,7 +166,7 @@ form > a.botao > span{
 /*Container Icones*/
 .wrapper .icon{
   position: relative;
-  border-radius: 50%;
+  border-radius: 20%;
   /*Contorno do icone*/
   background: #ffffff;
   padding: 15px;
@@ -178,7 +178,7 @@ form > a.botao > span{
   align-items: center;
   width: 30px;
   height: 30px;
-  font-size:12px;
+  font-size: 12px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
   
